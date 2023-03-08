@@ -1,0 +1,1045 @@
+{
+  "indiaTax":{
+    "inputs":{
+      "income": [
+        {
+          "groupName":"basicDetails",
+          "groupLabel":"Basic Details",
+          "description":"The tax deduction criteria vary based on the taxpayer's age and resident status. The maximum deduction range under 80DDB and 80D varies based on the taxpayer's age, such as citizen, senior citizen, and super senior citizen. The resident status is also considered to calculate the exact House Rent Allowance (HRA).",
+          "elements":[
+            {
+              "name":"Finanancial Year",
+              "hint":"Enter the financial year to calculate the tax",
+              "id":"financialYear",
+              "options":["2022-23","2023-24"],
+              "value":"2022-23"
+            },
+            {
+              "name":"Your Age",
+              "hint":"Enter the Tax Payer Age",
+              "id":"taxPayerAge",
+              "options":["Less than 60","Between 60 and 80", "Above 80"],
+              "value":"Less than 60"
+            },
+            {
+              "name":"Residential Status",
+              "hint":"Basic Component Details",
+              "id":"residentialStatus",
+              "options":["Stay in Metro city","Stay in Non-Metro city"],
+              "value":"Stay in Non-Metro city"
+            }
+          ]
+        },
+        {
+          "groupName":"salaryDetails",
+          "groupLabel":"Salary Details",
+          "description":"<p>Enter your salary details here. Please include your complete CTC (including the debited tax) in the 'Total CTC' field. The Basic, HRA, and DA will be used to calculate your HRA. If you worked for more than one company during the financial year, please include the sum of both company salaries.</p>",
+          "elements":[
+            {
+              "name":"Total CTC",
+              "hint":"Total CTC in the FY",
+              "id":"totalctc",
+              "value":1000000
+            },
+            {
+              "name":"Basic Component",
+              "hint":"This is used to calculate the HRA",
+              "id":"basicComponent",
+              "value":100000
+            },
+            {
+              "name":"Dearness allowance",
+              "hint":"This is used to calculate the HRA",
+              "id":"darnessAllowance",
+              "value":100000
+            },
+            {
+              "name":"HRA Component",
+              "hint":"House Rent Allowance Provided by the Company",
+              "id":"HRAByCompany",
+              "value":150000
+            },
+            {
+              "name":"Total Tax Deducted",
+              "hint":"Total tax deducted by the Company",
+              "id":"totalTax",
+              "value":200000
+            }
+          ]
+        },
+        {
+          "groupName":"otherIncome",
+          "groupLabel":"Other Income",
+          "description":"<p>Enter your income from other sources such as savings bank interest, rent received frol let-out property, trading income, income from social network and freelancing sites and income to your NRE account.</p>",
+          "elements":[
+            {
+              "name":"Income From Interest",
+              "hint":"Savings Bank, FD, Other Interests",
+              "id":"incomeFromInterest",
+              "value":12000
+            },
+            {
+              "name":"Rental Income",
+              "hint":"Income From Let-Out Property",
+              "id":"rentalIncome",
+              "value":50000
+            },
+            {
+              "name":"Income From Trading",
+              "hint":"Income From Trading Platform",
+              "id":"incomeFromTrading",
+              "value":10000
+            },
+            {
+              "name":"Other Income",
+              "hint":"Income From Youtube, Freelancing and Other Sources",
+              "id":"otherIncome",
+              "value":0
+            },
+            {
+              "name":"Income from On-site assignment(NRE Account)",
+              "hint":"On-Site salary income",
+              "id":"nreaccount",
+              "value":0
+            }
+          ]
+        }
+
+      ],
+      "deductions": [
+        {
+          "groupName":"80C",
+          "groupLabel":"80C Deductions",
+          "upperLimit":150000,
+          "description":"<p>You have the opportunity to invest up to Rs 1.5 lakh per year in various instruments listed under this section, each with its own unique advantages. These investment options include <b>Life insurance premium, Public Provident Fund (PPF), Employee Provident Fund, Sukanya Samriddhi Yojana, National Saving Certificate (NSC), Five-year fixed deposits with banks or post office, Senior Citizen Saving Scheme, Life insurance plans, Equity Linked Saving Schemes (ELSS), Principal repayment on housing loan and Tuition fee paid for a maximum of two children's educationp</b></p><p>Let's take a closer look at some of these investment options under 80C:</p><ul><li><b>PPF:</b> Public Provident Fund is a low-risk investment with a lock-in period of 15 years and an annualized return of 8%. The return from this investment is tax-free.</li><li><b>NSC:</b> National Saving Scheme offers a lock-in period of either 5 or 10 years with an annualized return of 8%. However, the return from this investment is not tax-free.</li><li><b>Tax Saving FD:</b> This investment has a lock-in period of 5 years with an annualized return of 6.5% to 7.5% (varies based on bank). The return from this investment is not tax-free.</li><li><b>ULIPs:</b> This investment has a lock-in period of 5 years with an annualized return of 8% to 18% (varies based on market situation). The return from this investment is tax-free, but the risk is high.</li><li><b>ELSS - Mutual Funds:</b> This investment has a lock-in period of 3 years with an annualized return of 13% to 22% (varies based on market situation). The return from this investment is taxable when profit exceeds Rs 1 lakh in a year. The risk is high in this investment.</li></ul>",
+          "elements":[
+            {
+              "name":"ELSS Investments",
+              "id":"elss",
+              "hint":"Total Investment in Tax Saving Mutual Funds",
+              "value":50000
+            },
+            {
+              "name":"NPS Investments",
+              "id":"nps",
+              "hint":"Total Investment in Tax Saving Mutual Funds",
+              "value":50000
+            },
+            {
+              "name":"ULIP Investments",
+              "id":"ulip",
+              "hint":"Life Insurance Investments",
+              "value":50000
+
+            },
+            {
+              "name":"PPF Investments",
+              "id":"ppf",
+              "hint":"PPF Investments(5 Yr Locking Period)",
+              "value":0
+
+
+            },
+            {
+              "name":"Sukanya Samriddhi Yojana Investments",
+              "id":"ssy",
+              "hint":"Investment for Girl Children(5 Yr Locking Period)",
+              "value":0
+
+            },
+            {
+              "name":"NSC Investments",
+              "id":"nsc",
+              "hint":"Low Risk Investment(5 Yr Locking Period)",
+              "value":0
+
+            },
+            {
+              "name":"Tax Saving FD Investments",
+              "id":"tsfd",
+              "hint":"Tax Saving FD(5 Yr Locking Period)",
+              "value":0
+
+            },
+            {
+              "name":"Employee Provident Fund",
+              "id":"epf",
+              "hint":"Retirement Savings(5 Yr Locking Period)",
+              "value":0
+
+            },
+            {
+              "name":"Principal Repayment On Housing Loan",
+              "id":"hlprincipal",
+              "hint":"Housing Loan Principal Paid",
+              "value":0
+
+            },
+            {
+              "name":"Children Tution Fees",
+              "id":"childrentutionfee",
+              "hint":"Children Tution Fee",
+              "value":0
+
+            }
+          ],
+          "warningCalculations":[
+            {
+              "calculations":[
+                {
+                  "action":"sum",
+                  "fields":["elss","nps","ulip","ppf","ssy","nsc","tsfd","epf","hlprincipal","childrentutionfee"],
+                  "condition": "grearthan",
+                  "value":"150000"
+                }
+              ],
+              "message": "Your total deductions under 80C is greater than 1.5 L"
+            }
+          ]
+
+        },
+        {
+          "groupName":"2A",
+          "groupLabel":"2A Deductions(HRA)",
+          "description":"<p>The exemption on HRA is calculated as per 2A of the Income Tax Rules. As per Rule 2A, the HRA calculated based on the least of below.</p><ul><li>Actual HRA received from the employer</li><li>For those living in metro cities: 50% of (Basic salary + Dearness allowance)</li><li>For those living in non-metro cities: 40% of (Basic salary + Dearness allowance)</li><li>Actual rent paid minus 10% of (Basic salary + Dearness allowance)</li></ul>",
+          "elements":[
+            {
+              "name":"Calculated HRA",
+              "id":"hra",
+              "hint":"HRA in the FY",
+              "value":"0"
+            }
+          ],
+          "warningCalculations":[
+            {
+              "calculations":[
+                {
+                  "validateCondition":[
+                    {
+                      "field":"residentialStatus",
+                      "condition":"equal",
+                      "value":"Stay in Metro city"
+                    },
+                    {
+                      "field":"basicComponent",
+                      "condition":"not",
+                      "value":"0"
+                    },
+                    {
+                      "field":"darnessAllowance",
+                      "condition":"not",
+                      "value":"0"
+                    }
+                  ],
+                  "action":"sum",
+                  "fields":["basicComponent","darnessAllowance"],
+                  "multiply":"0.5",
+                  "condition": "lessthan",
+                  "valueId":"hra"
+                },
+                {
+                  "validateCondition":[
+                    {
+                      "field":"residentialStatus",
+                      "condition":"equal",
+                      "value":"Stay in Non-Metro city"
+                    },
+                    {
+                      "field":"basicComponent",
+                      "condition":"not",
+                      "value":"0"
+                    },
+                    {
+                      "field":"darnessAllowance",
+                      "condition":"not",
+                      "value":"0"
+                    }
+                  ],
+                  "action":"sum",
+                  "fields":["basicComponent","darnessAllowance"],
+                  "multiply":"0.4",
+                  "condition": "lessthan",
+                  "valueId":"hra"
+                },
+                {
+                  "action":"sum",
+                  "validateCondition":[
+                    {
+                      "field":"HRAByCompany",
+                      "condition":"not",
+                      "value":"0"
+                    }
+                  ],
+                  "fields":["HRAByCompany"],
+                  "condition": "lessthan",
+                  "valueId":"hra"
+                }
+              ],
+              "calculationType":"or",
+              "message": "Your HRA is morethan the calculated HRA"
+            }
+          ]
+        },
+        {
+          "groupName":"80G",
+          "groupLabel":"80G Deductions",
+          "description":"<p>Under Section 80G of the Income Tax Act, taxpayers can claim deductions for donations made to specified funds or institutions. The amount of deduction can be up to 50% or 100% of the donation, subject to the limits specified in the Act.</p><p>It's important to note that donations made \"in kind,\" such as donating clothes, books, or utensils, do not qualify for deductions under this section. Therefore, taxpayers must ensure that they donate to eligible institutions and funds in order to claim tax deductions.</p>",
+          "elements":[
+            {
+              "name":"Donation To Charity",
+              "id":"charitydonation",
+              "hint":"Please enter only the tax deductable (50% or 100%) donation amount",
+              "value":"0"
+            }
+          ]
+        },
+        {
+          "groupName":"80d",
+          "groupLabel":"80D Expenses",
+          "upperLimit":50000,
+          "description":"<p>The 80D section of the Income Tax Act allows for deductions on health insurance premiums paid for self, spouse, dependent children, and parents. You can avail a deduction of up to Rs 25,000 for yourself and your family, and up to Rs 30,000 for a senior citizen health insurance policy. Additionally, within this limit, a deduction of Rs 5,000 is allowed for expenses incurred towards preventive health check-ups.</p><p>For super senior citizens without health insurance, a deduction of up to Rs 30,000 is allowed for expenses incurred on medical treatment.</p>",
+          "elements":[
+            {
+              "name":"Health Insurance Premium for Self",
+              "id":"selfhi",
+              "hint":"Max Limit: 25k for age < 60, 50k for age > 60  ",
+              "value":0
+            },
+            {
+              "name":"Health Insurance Premium for Parents",
+              "id":"parenthi",
+              "hint":"Max Limit: 25k for age < 60, 50k for age > 60  ",
+              "value":0
+            }
+          ],
+          "warningCalculations":[
+            {
+              "calculations":[
+                {
+                  "validateCondition":[
+                    {
+                      "field":"taxPayerAge",
+                      "condition":"equal",
+                      "value":"Less than 60"
+                    }
+                  ],
+                  "action":"sum",
+                  "fields":["selfhi"],
+                  "condition": "grearthan",
+                  "value":"25000"
+                },
+                {
+                  "validateCondition":[
+                    {
+                      "field":"taxPayerAge",
+                      "condition":"equal",
+                      "value":"Between 60 and 80"
+                    }
+                  ],
+                  "action":"sum",
+                  "fields":["selfhi"],
+                  "condition": "grearthan",
+                  "value":"50000"
+                },
+                {
+                  "validateCondition":[
+                    {
+                      "field":"taxPayerAge",
+                      "condition":"equal",
+                      "value":"Above 80"
+                    }
+                  ],
+                  "action":"sum",
+                  "fields":["selfhi"],
+                  "condition": "grearthan",
+                  "value":"50000"
+                }
+              ],
+              "calculationType":"or",
+              "message": "The maximum limit exceeded based on your age"
+            },
+            {
+              "calculations":[
+                {
+                  "action":"sum",
+                  "fields":["parenthi"],
+                  "condition": "grearthan",
+                  "value":"25000"
+                }
+              ],
+              "calculationType":"or",
+              "message": "Your parent age should be greater than 60"
+            }
+          ]
+        },
+        {
+          "groupName":"80E",
+          "groupLabel":"80E Expenses",
+          "upperLimit":500,
+          "description":"<p>Section 80E of the Income Tax Act allows for tax deductions on the interest paid for education loans. This deduction is available for loans taken for self, spouse, or children. It is important to note that the deduction is available from the year that the repayment starts and not from the year that the loan was availed.</p><p>Tax deductions can be claimed for a maximum of 8 years or until the interest is paid in full, whichever comes earlier. This provision aims to encourage higher education and alleviate the financial burden on taxpayers who take out loans for themselves or their family members.</p>",
+          "elements":[
+            {
+              "name":"Education Loan Interest for Self",
+              "id":"eduloanself",
+              "hint":"Interest Paid for Your Educational Loan",
+              "value":"0"
+            },
+            {
+              "name":"Educational Loan Interest for Spouse",
+              "id":"eduloanspouse",
+              "hint":"Interest Paid for Your Spouse Educational Loan",
+              "value":"0"
+            },
+            {
+              "name":"Educational Loan Interest for Children",
+              "id":"eduloanchildren",
+              "hint":"Interest Paid for Your Children Educational Loan",
+              "value":"0"
+            }
+          ]
+        },
+        {
+          "groupName":"80eea",
+          "groupLabel":"80EEA Deductions",
+          "description":"<p>The home loan interest can deducted under this section</p>",
+          "elements":[
+            {
+              "name":"Home Loan Interest",
+              "id":"hlinterst",
+              "hint":"Home Loan Interest",
+              "value":"0"
+            }
+          ]
+        },
+        {
+          "groupName":"80TTA",
+          "groupLabel":"80TTA Deductions",
+          "upperLimit":10000,
+          "description":"<p>Section 80TTA allows individuals or HUFs to claim a tax deduction for interest earned on savings accounts held with banks, co-operative societies, or post offices. The deduction is allowed for the actual amount of interest earned or up to Rs 10,000, whichever is lower. However, this benefit does not apply to interest earned on term deposits.</p><p>If the interest income earned on a savings account exceeds Rs 10,000, the excess amount will be subject to tax as per your income tax slab.</p>",
+          "elements":[
+            {
+              "name":"Savings Account Interest Deduction",
+              "id":"savingsdeduction",
+              "hint":"Max Must be less than 10000",
+              "value":"0"
+            }
+          ],
+
+          "warningCalculations":[
+            {
+              "calculations":[
+                {
+                  "action":"sum",
+                  "fields":["savingsdeduction"],
+                  "condition": "grearthan",
+                  "value":"10000"
+                }
+              ],
+              "message": "The maximum deduction under 80TTA is 10 thousand."
+            },
+            {
+              "calculations":[
+                {
+                  "action":"sum",
+                  "fields":["savingsdeduction"],
+                  "condition": "grearthan",
+                  "valueId":"incomeFromInterest"
+                }
+              ],
+              "message": "80TTA deduction and income from interest is not matching."
+            }
+          ]
+        },
+        {
+          "groupName":"80CCG",
+          "groupLabel":"80CCG Deductions",
+          "upperLimit":50000,
+          "description":"<p>The Rajiv Gandhi Equity Savings Scheme (RGESS) was introduced in the Finance Act, 2012. A new retail investor who complies with the condition of gross total income less than Rs 12 lakh can enjoy a deduction under RGESS. One can invest a maximum of Rs 50,000 for claiming a deduction under RGESS. The new retail investor gets a 50% deduction of the amount invested from the taxable income for that financial year.</p>",
+          "elements":[
+            {
+              "name":"RGESS Investment",
+              "id":"rgessInvestment",
+              "hint":"Max Investment < 50k, Gross income < 12LPA",
+              "value":"0"
+            }
+          ],
+
+          "warningCalculations":[
+            {
+              "calculations":[
+                {
+                  "validateCondition":[
+                    {
+                      "field":"rgessInvestment",
+                      "condition":"not",
+                      "value":"0"
+                    }
+                  ],
+                  "action":"sum",
+                  "fields":["totalctc","incomeFromInterest","rentalIncome","incomeFromTrading","otherIncome"],
+                  "condition": "grearthan",
+                  "value":"1200000"
+                }
+              ],
+              "message": "Your total CTC is more than 12L."
+            },
+            {
+              "calculations":[
+                {
+                  "action":"sum",
+                  "fields":["rgessInvestment"],
+                  "condition": "grearthan",
+                  "value":"50000"
+                }
+              ],
+              "message": "The maximum investment under RGESS is 50 thousand."
+            }
+          ]
+        },
+        {
+          "groupName":"80GG",
+          "groupLabel":"80GG Deductions",
+          "upperLimit":50000,
+          "description":"<p>If you are a salaried individual without a house rent allowance or a self-employed individual paying rent for residential accommodation, you can claim tax deduction under Section 80GG of the Income Tax Act. However, there are certain conditions that need to be fulfilled, including:</p><ul><li>You pay rent but do not receive any HRA, even for a part of the year.</li><li>You do not own or occupy any other house anywhere.</li><li>You, your spouse, minor child, or HUF do not own any house in the city you reside or work in.</li><p>If you fulfill these conditions, the deduction available to you will be the lower of:</p><ul><li>Rs. 5,000 per month</li><li>25% of your total income</li></ul><p>Rent paid in excess of 10% of your total income.</p>",
+          "elements":[
+            {
+              "name":"Rent Paid as Per 80GG",
+              "id":"80GGRentPaid",
+              "hint":"Max Investment: 5k x 12",
+              "value":"0"
+            }
+          ],
+
+          "warningCalculations":[
+            {
+              "calculations":[
+                {
+                  "validateCondition":[
+                    {
+                      "field":"80GGRentPaid",
+                      "condition":"not",
+                      "value":"0"
+                    }
+                  ],
+                  "action":"sum",
+                  "fields":["HRAByCompany"],
+                  "condition": "grearthan",
+                  "value":"1"
+                },
+                {
+                  "validateCondition":[
+                    {
+                      "field":"80GGRentPaid",
+                      "condition":"not",
+                      "value":"0"
+                    }
+                  ],
+                  "action":"sum",
+                  "fields":["hra"],
+                  "condition": "grearthan",
+                  "value":"1"
+                }
+              ],
+              "calculationType":"or",
+              "message": "You Filled up HRA related entries"
+            }
+          ]
+        },
+        {
+          "groupName":"80DDB",
+          "groupLabel":"80DDB Deductions",
+          "upperLimit":50000,
+          "description":"<p>Section 80DDB of the Income Tax Act provides tax deductions for medical expenses incurred for the treatment of certain diseases, including neurological diseases (where the disability level has been certified as 40% or more), Parkinson’s disease, malignant cancers, acquired immune deficiency syndrome (AIDS), chronic renal failure, hemophilia, and thalassemia. The tax benefit is capped at the actual amount spent, up to Rs 40,000 per year.</p><p>For senior citizens, the benefit is the lower of the actual expense or Rs 60,000. Super senior citizens aged 80 years or older are entitled to a maximum benefit of Rs 80,000.</p>",
+          "elements":[
+            {
+              "name":"Deduction as per 80DDB",
+              "id":"80ddbdeduction",
+              "hint":"Upper cap is 40K, For senior citizen 80K, For super senior citizens 80K",
+              "value":"0"
+            }
+          ],
+          "warningCalculations":[
+            {
+              "calculations":[
+                {
+                  "validateCondition":[
+                    {
+                      "field":"taxPayerAge",
+                      "condition":"equal",
+                      "value":"Less than 60"
+                    }
+                  ],
+                  "action":"sum",
+                  "fields":["80ddbdeduction"],
+                  "condition": "grearthan",
+                  "value":"40000"
+                },
+                {
+                  "validateCondition":[
+                    {
+                      "field":"taxPayerAge",
+                      "condition":"equal",
+                      "value":"Between 60 and 80"
+                    }
+                  ],
+                  "action":"sum",
+                  "fields":["80ddbdeduction"],
+                  "condition": "grearthan",
+                  "value":"60000"
+                },
+                {
+                  "validateCondition":[
+                    {
+                      "field":"taxPayerAge",
+                      "condition":"equal",
+                      "value":"Above 80"
+                    }
+                  ],
+                  "action":"sum",
+                  "fields":["80ddbdeduction"],
+                  "condition": "grearthan",
+                  "value":"80000"
+                }
+              ],
+              "calculationType":"or",
+              "message": "Your limit exceeded based on your age selection"
+            }
+          ]
+        },
+        {
+          "groupName":"80U",
+          "groupLabel":"80U Deductions",
+          "upperLimit":50000,
+          "description":"<p>An individual can claim a tax deduction under section 80U of the Income Tax Act if they suffer from any of the specified conditions which include blindness, low vision, leprosy-cured, hearing impairment, locomotor disability, mental retardation, and mental illness. If an individual is suffering from 40% or more of such conditions, they are entitled to a fixed deduction of Rs 75,000 irrespective of their income and expenditure incurred on the condition. In case of disability of more than 80%, the individual is entitled to a fixed deduction of Rs 1.25 lakh irrespective of their income and expenditure incurred on the condition.</p>",
+          "elements":[
+            {
+              "name":"Deduction as per 80U",
+              "id":"80udeduction",
+              "hint":"Upper cap is 75,000  or 1.25L based on the condition",
+              "value":"0"
+            }
+          ],
+          "warningCalculations":[
+            {
+              "calculations":[
+                {
+                  "action":"sum",
+                  "fields":["80udeduction"],
+                  "condition": "grearthan",
+                  "value":"1"
+                }
+              ],
+              "message": "Individual with disabilty can claim this deduction."
+            }
+          ]
+        }
+      ]
+
+    },
+    "plans":[
+      {
+        "type":"oldRegim22",
+        "label":"Old Regim(2022-23)",
+        "conditions":[{
+          "fieldId":"financialYear",
+          "fieldValue":"2022-23"
+        },
+        {
+          "fieldId":"taxPayerAge",
+          "fieldValue":"Less than 60"
+        }],
+        "includeIncomesFields":["totalctc","incomeFromInterest","rentalIncome","incomeFromTrading","otherIncome"],
+        "includeDeductionGroups":["80C","2A","80G","80E","80TTA","80CCG","80GG","80DDB","80U"],
+        "taxDeductedFields":["totalTax"],
+        "calculations":[
+          {
+            "minAmount":0,
+            "maxAmount":250000,
+            "id":1,
+            "taxPercent":0,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":250001,
+            "maxAmount":500000,
+            "id":2,
+            "taxPercent":5,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":500001,
+            "maxAmount":1000000,
+            "id":3,
+            "taxPercent":20,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":1000001,
+            "maxAmount":-1,
+            "id":4,
+            "taxPercent":30,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          }
+
+      ]
+
+
+      },
+      {
+        "type":"oldRegim22",
+        "label":"Old Regim(2022-23)",
+        "conditions":[{
+          "fieldId":"financialYear",
+          "fieldValue":"2022-23"
+        },
+        {
+          "fieldId":"taxPayerAge",
+          "fieldValue":"Between 60 and 80"
+        }],
+        "includeIncomesFields":["totalctc","incomeFromInterest","rentalIncome","incomeFromTrading","otherIncome"],
+        "includeDeductionGroups":["80C","2A","80G","80E","80TTA","80CCG","80GG","80DDB","80U"],
+        "calculations":[
+          {
+            "minAmount":0,
+            "maxAmount":300000,
+            "id":1,
+            "taxPercent":0,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":300001,
+            "maxAmount":500000,
+            "id":2,
+            "taxPercent":5,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":500001,
+            "maxAmount":1000000,
+            "id":3,
+            "taxPercent":20,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":1000001,
+            "maxAmount":-1,
+            "id":4,
+            "taxPercent":30,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          }
+
+      ]
+
+
+      },
+      {
+        "type":"oldRegim22",
+        "label":"Old Regim(2022-23)",
+        "conditions":[{
+          "fieldId":"financialYear",
+          "fieldValue":"2022-23"
+        },
+        {
+          "fieldId":"taxPayerAge",
+          "fieldValue":"Above 80"
+        }],
+        "includeIncomesFields":["totalctc","incomeFromInterest","rentalIncome","incomeFromTrading","otherIncome"],
+        "includeDeductionGroups":["80C","2A","80G","80E","80TTA","80CCG","80GG","80DDB","80U"],
+        "calculations":[
+          {
+            "minAmount":0,
+            "maxAmount":500000,
+            "id":1,
+            "taxPercent":0,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":500001,
+            "maxAmount":1000000,
+            "id":3,
+            "taxPercent":20,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":1000001,
+            "maxAmount":-1,
+            "id":4,
+            "taxPercent":30,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          }
+
+      ]
+
+
+      },
+      {
+        "type":"newRegim",
+        "label":"New Regim(2022-23)",
+        "conditions":[{
+          "fieldId":"financialYear",
+          "fieldValue":"2022-23"
+        }],
+        "includeIncomesFields":["totalctc","incomeFromInterest","rentalIncome","incomeFromTrading","otherIncome"],
+        "includeDeductionGroups":[],
+        "calculations":[
+          {
+            "minAmount":0,
+            "maxAmount":250000,
+            "id":1,
+            "taxPercent":0,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"lessthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":250001,
+            "maxAmount":500000,
+            "id":2,
+            "taxPercent":5,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":500001,
+            "maxAmount":750000,
+            "id":3,
+            "taxPercent":10,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":750001,
+            "maxAmount":1000000,
+            "id":4,
+            "taxPercent":15,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":1000001,
+            "maxAmount":1250000,
+            "id":5,
+            "taxPercent":20,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":1250001,
+            "maxAmount":1500000,
+            "id":6,
+            "taxPercent":25,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":1500001,
+            "maxAmount":-1,
+            "id":7,
+            "taxPercent":30,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          }
+
+      ]
+
+
+      },
+      {
+        "type":"newRegim",
+        "label":"New Regim(2023-24)",
+        "conditions":[{
+          "fieldId":"financialYear",
+          "fieldValue":"2023-24"
+        }],
+        "includeIncomesFields":["totalctc","incomeFromInterest","rentalIncome","incomeFromTrading","otherIncome"],
+        "includeDeductionGroups":[],
+        "calculations":[
+          {
+            "minAmount":0,
+            "maxAmount":300000,
+            "id":1,
+            "taxPercent":0,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"lessthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":300001,
+            "maxAmount":600000,
+            "id":2,
+            "taxPercent":5,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":600001,
+            "maxAmount":900000,
+            "id":3,
+            "taxPercent":10,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":900001,
+            "maxAmount":1200000,
+            "id":4,
+            "taxPercent":15,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":1200001,
+            "maxAmount":1500000,
+            "id":5,
+            "taxPercent":20,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          },
+          {
+            "minAmount":1500001,
+            "maxAmount":-1,
+            "id":7,
+            "taxPercent":30,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"0"
+              }
+            ]
+          }
+
+      ]
+
+
+      }
+
+
+      ]
+
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "indiaTax":{
+    "inputs":{
+      "income": [
+        {
+          "groupName":"userIncome",
+          "groupLabel":"User Income",
+          "elements":[
+            {
+              "name":"Total Salaried Income",
+              "hint":"Enter your complete salaried income",
+              "id":"salariedIncome",
+              "value":200
+            },
+            {
+              "name":"Other Income",
+              "hint":"Enter your other incomes from other areas",
+              "id":"otherIncome"
+            }
+          ]
+        }
+
+      ],
+      "expense": [
+        {
+          "groupName":"80c",
+          "groupLabel":"80C Expense",
+          "upperLimit":500,
+          "elements":[
+            {
+              "name":"ELSS Expense",
+              "id":"elss"
+            },
+            {
+              "name":"LIC Investment",
+              "id":"lic"
+            },
+            {
+              "name":"principal",
+              "id":"Home Loan Principal"
+            }
+          ]
+
+        },
+        {
+          "groupName":"80d",
+          "groupLabel":"80d Expense",
+          "upperLimit":500,
+          "elements":[
+            {
+              "name":"ELSS2 Expense",
+              "id":"elss2"
+            },
+            {
+              "name":"LIC2 Investment",
+              "id":"lic2"
+            },
+            {
+              "name":"principal2",
+              "id":"Home 2Loan Principal"
+            }
+          ]
+        }
+      ]
+
+    },
+    "plans":[
+      {
+        "type":"newRegim",
+        "label":"New Regim",
+        "includeIncomes":[],
+        "includeExpense":[],
+        "calculations":[
+          {
+            "minAmount":0,
+            "maxAmount":2000,
+            "id":1,
+            "taxPercent":0,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"lessthan",
+                "value":"2000"
+              }
+            ]
+          },
+          {
+            "minAmount":0,
+            "maxAmount":500,
+            "id":2,
+            "taxPercent":0,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"2000"
+              }
+            ]
+          },
+          {
+            "minAmount":501,
+            "maxAmount":1000,
+            "id":3,
+            "taxPercent":5,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"2000"
+              }
+            ]
+          },
+          {
+            "minAmount":1001,
+            "maxAmount":1500,
+            "id":4,
+            "taxPercent":10,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"2000"
+              }
+            ]
+          },
+          {
+            "minAmount":1501,
+            "maxAmount":2000,
+            "id":5,
+            "taxPercent":20,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"2000"
+              }
+            ]
+          },
+          {
+            "minAmount":2001,
+            "maxAmount":5000,
+            "id":6,
+            "taxPercent":30,
+            "conditions":[
+              {
+                "parameter":"totalTaxableIncome",
+                "condition":"greaterthan",
+                "value":"2000"
+              }
+            ]
+          }
+
+      ]
+
+
+      }
+      ,
+      {
+        "type":"oldRegim",
+        "label":"Old Regim",
+        "includeIncomes":[],
+        "includeExpense":[],
+        "calculations":[
+          {
+            "maxAmount":"",
+            "priority":"",
+            "taxPercent":"",
+            "conditions":[
+              {
+                "totalIncome":""
+              }
+            ]
+          }
+
+      ]
+      }
+
+      ]
+
+  }
+}
